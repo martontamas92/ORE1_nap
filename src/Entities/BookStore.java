@@ -16,35 +16,42 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "bookstore")
 public class BookStore {
+
+
 	@Id
-	@Table(name = "bookstore")
 	private int id;
 	private List<Book> books = new ArrayList<Book>();
 	EntityManagerFactory emf;
 	EntityManager em;
-	BookStore(String persistenceUnitName) {
+	public BookStore(String persistenceUnitName) {
 		emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 		em = emf.createEntityManager();
 		//em.getTransaction().begin();
 		//transaction.accept(em);
 	}
 
-	Long addBook(Book newBook) {
+	public Long addBook(Book newBook) {
 		//books.add(newBook);
 		em.getTransaction().begin();
 		em.persist(newBook);
 		em.getTransaction().commit();
 		return newBook.getId();
 	}
-	void removeBookById(int bookId) {
+	public void removeBookById(int bookId) {
 		//books.remove(bookId);
 //		em.getTransaction().begin();
 		Query q = em.createQuery("DELETE FROM booksstore b where  b.id = :bookId").setParameter("bookId", bookId);
 		q.executeUpdate();
-
-
 	}
+
+	public List<Book> getAllBooks() {
+		Query q = em.createQuery("SELECT b FROM books b",Book.class);
+		return q.getResultList();
+	}
+
+
 
 
 
