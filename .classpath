@@ -6,5 +6,10 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="var" path="DERBY"/>
+	<classpathentry kind="var" path="ECLIPSELINK"/>
+	<classpathentry kind="var" path="GLASSFISH"/>
+	<classpathentry kind="var" path="LOMBOK"/>
+	<classpathentry kind="var" path="PERS"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
