@@ -6,10 +6,11 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="var" path="DERBY"/>
-	<classpathentry kind="var" path="ECLIPSELINK"/>
+	<classpathentry kind="var" path="DERBY/lib/derbyclient.jar"/>
 	<classpathentry kind="var" path="GLASSFISH"/>
 	<classpathentry kind="var" path="LOMBOK"/>
 	<classpathentry kind="var" path="PERS"/>
+	<classpathentry kind="var" path="ECLIPSELINK/jlib/eclipselink.jar"/>
+	<classpathentry kind="lib" path="D:/Elosztott rendszerek/Enviroment_setup/db-derby-10.14.2.0-bin/lib/derby.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

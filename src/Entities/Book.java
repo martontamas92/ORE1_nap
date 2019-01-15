@@ -16,7 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.sun.istack.internal.NotNull;
+
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -38,15 +38,15 @@ public class Book {
 	public enum Status {IN_STOCK, OUT_OF_STOCK, UNKNOWN};
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotNull
+
 	private Long id;
 
 	@Column(name = "title", length = 255, nullable = false)
-	@NotNull
+
 	private String title;
 
 	@Column(name = "author", length = 255, nullable = false)
-	@NotNull
+
 	private String author;
 	@Temporal(TemporalType.TIME)
 	private Date publishedAt;

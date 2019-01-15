@@ -42,12 +42,12 @@ public class BookStore {
 	public void removeBookById(int bookId) {
 		//books.remove(bookId);
 //		em.getTransaction().begin();
-		Query q = em.createQuery("DELETE FROM booksstore b where  b.id = :bookId").setParameter("bookId", bookId);
+		Query q = em.createQuery("DELETE FROM bookstore b where  b.id = :bookId").setParameter("bookId", bookId);
 		q.executeUpdate();
 	}
 
 	public List<Book> getAllBooks() {
-		Query q = em.createQuery("SELECT b FROM books b",Book.class);
+		Query q = em.createQuery("SELECT b FROM Book b",Book.class);
 		return q.getResultList();
 	}
 
