@@ -25,11 +25,11 @@ public class BookStore {
 	private List<Book> books = new ArrayList<Book>();
 	EntityManagerFactory emf;
 	EntityManager em;
+	public BookStore() {}
 	public BookStore(String persistenceUnitName) {
 		emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 		em = emf.createEntityManager();
-		//em.getTransaction().begin();
-		//transaction.accept(em);
+
 	}
 
 	public Long addBook(Book newBook) {

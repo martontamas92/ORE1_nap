@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <!-- Entity classes -->
     <class>Entities.Book</class>
+    <class>Entities.BookStore</class>
     <properties>
       <!-- JDBC Connection options -->
       <property name="javax.persistence.jdbc.url" value="jdbc:derby:testdb;create=true"/>
