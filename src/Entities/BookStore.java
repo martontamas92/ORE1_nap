@@ -42,7 +42,7 @@ public class BookStore {
 	public void removeBookById(int bookId) {
 		//books.remove(bookId);
 //		em.getTransaction().begin();
-		Query q = em.createQuery("DELETE FROM bookstore b where  b.id = :bookId").setParameter("bookId", bookId);
+		Query q = em.createQuery("DELETE FROM BookStore b where  b.id = :bookId").setParameter("bookId", bookId);
 		q.executeUpdate();
 	}
 

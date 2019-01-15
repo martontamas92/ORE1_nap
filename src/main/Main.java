@@ -9,7 +9,7 @@ import Entities.BookStore;
 public class Main {
 	public static void main(String[] args) {
 		Book b = new Book();
-		b.setAuthor("asd");
+		//b.setAuthor("asd");
 		b.setPages(304);
 		b.setTitle("bas");
 		b.setStockStatus(Status.IN_STOCK);

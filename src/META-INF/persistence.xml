@@ -5,6 +5,7 @@
     <!-- Entity classes -->
     <class>Entities.Book</class>
     <class>Entities.BookStore</class>
+    <class>Entities.Author</class>
     <properties>
       <!-- JDBC Connection options -->
       <property name="javax.persistence.jdbc.url" value="jdbc:derby:testdb;create=true"/>
